@@ -8,6 +8,7 @@ let PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('style'));
 
 let reservations = [
   {
@@ -39,18 +40,18 @@ app.get("/reservation", function (req, res) {
 });
 
 app.get("/api/reservations", function (req, res) {
- 
+
   return res.json(reservations);
 });
 
-app.post("/api/reservations", function(req, res) {
-   
-    let newReservation = req.body;
+app.post("/api/reservations", function (req, res) {
 
-    reservations.push(newReservation);
+  let newReservation = req.body;
 
-    res.json(reservations);
-  });
+  reservations.push(newReservation);
+
+  res.json(reservations);
+});
 
 
 app.listen(PORT, function () {

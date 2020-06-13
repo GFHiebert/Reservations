@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Restaurant</title>
     <!-- CSS Stylesheet SRC -->
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style.css">
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -14,8 +14,6 @@
 
 <body>
     <div class="container">
-
-
         <div class="jumbotron text-center" id="home">
             <h1>Hot Restaurant</h1>
             <h3>Current Reservations and Waiting List</h3>
@@ -24,12 +22,12 @@
                 <a href="#"><button class="btn btn-danger btn-lg">
                         <span class="fa fa-free-code-camp"></span> Make Reservation
                     </button></a>
-                <a href="#"><button class="btn btn-light btn-lg">
+                <a href="./"><button class="btn btn-light btn-lg">
                         <span class="fa fa-list-alt"></span> Home
                     </button></a>
             </div>
         </div>
-       
+
         <div class="row">
             <div id="res-list-body" class="current-list-body col-lg-12">
                 <div id="res-list-header">
@@ -76,8 +74,8 @@
 
     </div>
 
-     <!-- Insert at end of Div container -->
-     <footer>
+    <!-- Insert at end of Div container -->
+    <footer>
         <p>
             <a href="#">API Table Link</a> |
             <a href="#">API Wait List</a>
@@ -108,8 +106,6 @@
                 console.log("Data: " + data + "\nStatus: " + status);
             });
         });
-
-
 
 
     </script>
