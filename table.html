@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Restaurant</title>
+    <!-- CSS Stylesheet SRC -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center" id="home">
+            <h1>Hot Restaurant</h1>
+            <h3>Current Reservations and Waiting List</h3>
+            <!-- Remove btn that matches page -->
+            <div class="my-3 text-center">
+                <a href="#"><button class="btn btn-danger btn-lg">
+                        <span class="fa fa-free-code-camp"></span> Make Reservation
+                    </button></a>
+                <a href="./"><button class="btn btn-light btn-lg">
+                        <span class="fa fa-list-alt"></span> Home
+                    </button></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="res-list-body" class="current-list-body col-lg-12">
+                <div id="res-list-header">
+                    <h4 id="res-list-title">Current Reservations</h4>
+                </div>
+                <div class="res-panel">
+                    <h3>
+                        <span class="res-num">1</span>
+                        | John Snow
+                    </h3>
+                </div>
+
+                <div class="res-panel">
+                    <h3>
+                        <span class="res-num">2</span>
+                        | Jack Ryan
+                    </h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div id="res-list-body" class="current-list-body col-lg-12">
+                <div id="res-list-header">
+                    <h4 id="res-list-title">Waiting List</h4>
+                </div>
+                <div class="res-panel">
+                    <h3>
+                        <span class="res-num">1</span>
+                        | Albert Einstein
+                    </h3>
+                </div>
+
+                <div class="res-panel">
+                    <h3>
+                        <span class="res-num">2</span>
+                        | Ludwig van Beethoven
+                    </h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Insert at end of Div container -->
+    <footer>
+        <p>
+            <a href="#">API Table Link</a> |
+            <a href="#">API Wait List</a>
+        </p>
+    </footer>
+    </div>
+
+
+
+    </div>
+    <!-- Bootstrap JS CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <!-- JavaScript SRC -->
+    <script>
+
+        $(window).on("load", function () {
+            $.get("/api/reservations", function (data, status) {
+                console.log("Data: " + data + "\nStatus: " + status);
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

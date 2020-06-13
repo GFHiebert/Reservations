@@ -1,0 +1,38 @@
+#res-list-header {
+    background-color: lightgray;
+    border-bottom-style: solid;
+    width: 100%;
+    border-width: 1px;
+}
+
+#res-list-title {
+    padding: 10px;
+}
+
+#res-list-body {
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.res-panel {
+    background-color: lightgray;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: gray;
+    margin: 15px;
+    padding: 25px;
+}
+
+.res-num {
+    background-color: blue;
+    border-radius: 5px;
+    padding: 5px 13px;
+    width: min-content;
+    color: white;
+}
+
